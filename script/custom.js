@@ -58,13 +58,13 @@ $(window).load, $(document).ready(function () {
         } else {
             $('.section03 .section03-stuff .chicken').removeClass('chicken-move');
         }
-        if (($(window).scrollTop() <= 11400)) {
+        if (($(window).scrollTop() <= 11500)) {
             $('.boss').css({
                 'z-index': '99998',
                 'transition': '0.2s'
             });
         }
-        if (($(window).scrollTop() > 11400)) {
+        if (($(window).scrollTop() >= 11500)) {
             $('.boss').css({
                 'z-index': '-1',
                 'transition': '0s'
