@@ -1,0 +1,92 @@
+@charset 'utf-8';
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+#main-container>section {
+    background: #00031f;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#horizontal-container {
+    font-family: 'Dung';
+    background: url(../images/sectionbg.jpg) top center;
+    width: 500vw;
+    height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+}
+
+.horizontal-section {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#last-container {
+    width: 100%;
+    height: 100vh;
+    background: #000;
+}
+
+/* ===reset=== */
+
+
+/* 웹폰트 */
+@font-face {
+    font-family: 'Dung';
+    src: url(../font/DungGeunMo.ttf);
+}
+
+@font-face {
+    font-family: 'esa';
+    src: url(../font/esamanru\ Light.ttf);
+}
+
+@font-face {
+    font-family: 'ridi';
+    src: url(../font/RIDIBatang.otf);
+}
+
+@font-face {
+    font-family: 'Jal';
+    src: url(../font/Jalnan.ttf);
+}
+
+@font-face {
+    font-family: 'Jal_Haru';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Jal_Haru.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
