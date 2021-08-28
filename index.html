@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <link rel="icon" href="./favicon/favicon.ico" type="image/x-icon">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Welcome to my room</title>
+</head>
+<!-- gap&grid 이용해서 향후 전체적으로 고칠 것 -->
+
+<body class="active">
+    <div class="window-Scroll">
+        0
+    </div>
+    <div class="boss"></div>
+    <!-- 고정메뉴바 -->
+    <div class="fixmenu-button" id="fixmenu-toggle">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+    </div>
+    <div class="fixmenu-overlay" id="fixmenu-overlay">
+        <nav class="overlay-menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- vertical/ main-container -->
+    <div id="main-container">
+        <nav class="icon-nav">
+            <ul class="i-nav-left">
+                <li>10:09</li>
+                <li>WDI</li>
+                <li>...</li>
+            </ul>
+            <ul class="i-nav-right">
+                <li><img src="./images/time_icon.png" alt="time"></li>
+                <li><img src="./images/wifi_icon.png" alt="wifi"></li>
+                <li><img src="./images/graph_icon.png" alt="graph"></li>
+                <li>92%</li>
+                <li><img src="./images/battery.png" alt="birth year"></li>
+            </ul>
+        </nav>
+        <section class="main1" id="home">
+            <p class="main-plz1">click on message ></p>
+            <p class="main-plz2"><span>현재 수정중인 포트폴리오로 크롬/pc로 확인 부탁드립니다.</span><br>
+                and scroll▽</p>
+            <div class="typing-box1">
+                <div class="typing1-txt">
+                    <ul>
+                        <li>ROOM!</li>
+                        <li>PORTFOLIO</li>
+                    </ul>
+                </div>
+                <span class="typing1-size">Welcome to my<p class="typing1"></p></span>
+            </div>
+            <div class="sns1">
+                <div class="message">
+                    <img onclick="messageOn()" src="./images/message_icon.png" alt="messageicon">
+                </div>
+                <div class="message-under"></div>
+            </div>
+            <canvas id="space"></canvas>
+        </section>
+        <section class="main2" id="about">
+            <div class="typing2-box">
+                <div class="typing2-txt">
+                    <ul>
+                        <li>변화하고 적응하는 코딩처럼</li>
+                        <li>시도하고 시도하는</li>
+                        <li>긍정적인 신입</li>
+                    </ul>
+                </div>
+                <div class="typing2">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sns2">
+                <div class="gallery">
+                    <p>띠링-!</p>
+                    <img onclick="galleryOn()" src="./images/gallery_icon.png" alt="gallery">
+                </div>
+                <div class="gallery-under"></div>
+            </div>
+        </section>
+    </div>
+    <!-- horizontal-container -->
+    <div id="horizontal-container">
+        <section class="section01 horizontal-section">
+            <div class="myskill">
+                <div class="skill-box">
+                    <div class="skill-boxin">
+                        <h2 class="skill-tit">HTML</h2>
+                        <p class="skill-text">
+                            HTML5언어를 이해하고 사용합니다.<br>
+                            시멘틱태그를 이용하여
+                            기초를 잡을 수 있습니다</p>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-boxin">
+                        <h2 class="skill-tit">CSS</h2>
+                        <p class="skill-text">원하는 레이아웃과 스타일 및 기능 작업이 가능합니다.</p>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-boxin">
+                        <h2 class="skill-tit">
+                            JavaScript</h2>
+                        <p class="skill-text">간단한 자바스크립트
+                            언어<br>해석과 활용이 가능합니다.</p>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-boxin">
+                        <h2 class="skill-tit">Jquery</h2>
+                        <p class="skill-text">제이쿼리 기본문을 이해하고 입력 가능하며,오픈소스를 해석하고 활용 할 수 있습니다.</p>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-boxin">
+                        <h2 class="skill-tit">Photoshop</h2>
+                        <p class="skill-text">툴을 이해하고 사용합니다.<br>보정과 이미지편집등 작업이 가능합니다.</p>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-boxin">
+                        <h2 class="skill-tit">illustrator</h2>
+                        <p class="skill-text">일러스트툴을 이해하고 사용합니다<br>로고 및 일러스트 작업이 가능합니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section01-stuff">
+                <p class="ps"><span>MY SKILL !!</span>
+                    마우스를 올리면 상세정보를 볼 수 있어요 </p>
+                <div class="s1-stuff">
+                    <ul>
+                        <li class="holder">
+                            <img src="./images/pencil-holder.png" alt="#">
+                        </li>
+                        <li>
+                            <div class="laptop">
+                                <img src="./images/laptop.png" alt="#">
+                                <div class="artwork">
+                                    <img src="./images/meatbox_web.png" alt="wireframe">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="flowerpot">
+                            <img src="./images/flowerpot.png" alt="#">
+                        </li>
+                        <!-- 문제1 -->
+                        <li class="standon">
+                            <img src="./images/stand-on.png" alt="#">
+                            <div class="stand">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="desk">
+                        <img src="./images/desk.png" alt="#">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section02 horizontal-section" id="work">
+            <div class="website-content">
+                <div class="done"><img src="./images/close.png" alt="close"></div>
+                <ul>
+                    <li>
+                        <img class="siteicon" src="./images/meatbox_icon.png" alt="siteicon">
+                        <h2 class="sitename">MEAT-BOX</h2>
+                        <span class="ex">기획:100%<br>디자인:100%<br>코딩100%</span>
+                        <div class="btnbox">
+                            <a href="https://github.com/cosmo3o/meat_box.git" target="_blank" rel="noopener">
+                                <div class="siteBtn"><span>SOURCE</span></div>
+                            </a>
+                            <a href="https://cosmo3o.github.io/meat_box/" target="_blank" rel="noopener">
+                                <div class="siteBtn"><span>SITE VIEW</span></div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="siteicon" src="./images/fill_art.icon.png" alt="siteicon">
+                        <h2 class="sitename">FILL-ART</h2>
+                        <span class="ex">기획:0%<br>디자인:0%<br>코딩:100%</span>
+                        <div class="btnbox">
+                            <a href="https://github.com/cosmo3o/fillart.git" target="_blank" rel="noopener,noreferrer">
+                                <div class="siteBtn"><span>SOURCE</span></div>
+                            </a>
+                            <a href="https://cosmo3o.github.io/fillart/" target="_blank" rel="noopener,noreferrer">
+                                <div class="siteBtn"><span>SITE VIEW</span></div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="siteicon" src="./images/ikea-icon.png" alt="siteicon">
+                        <h2 class="sitename">IKEA-KOREA</h2>
+                        <span class="ex">기획:0%<br>디자인:0%<br>코딩:100%</span>
+                        <div class="btnbox">
+                            <a href="https://cosmo3o.github.io/ikea/" target="_blank" rel="noopener,noreferrer">
+                                <div class="siteBtn"><span>SITE VIEW</span></div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="siteicon" src="./images/duolac-icon.png" alt="siteicon">
+                        <h2 class="sitename">DUOLAC</h2>
+                        <span class="ex">기획:100%<br>디자인:100%<br>코딩100%</span>
+                        <div class="btnbox">
+                            <a href="https://github.com/cosmo3o/duolac.git" target="_blank" rel="noopener,noreferrer">
+                                <div class="siteBtn"><span>SOURCE</span></div>
+                            </a>
+                            <a href="https://cosmo3o.github.io/duolac/" target="_blank" rel="noopener,noreferrer">
+                                <div class="siteBtn"><span>SITE VIEW</span></div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="siteicon" src="./images/midnight_bubble_icon.png" alt="siteicon">
+                        <h2 class="sitename">MIDNIGHT-BUBBLE</h2>
+                        <span class="ex">기획:100%<br>디자인:100%<br>코딩100%</span>
+                        <div class="btnbox">
+                            <a href="https://github.com/cosmo3o/midnight_bubble.git" target="_blank"
+                                rel="noopener,noreferrer">
+                                <div class="siteBtn"><span>SOURCE</span></div>
+                            </a>
+                            <a href="https://cosmo3o.github.io/midnight_bubble/" target="_blank"
+                                rel="noopener,noreferrer">
+                                <div class="siteBtn"><span>SITE VIEW</span></div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="siteicon" src="./images/blue_elephants_icon.png" alt="siteicon">
+                        <h2 class="sitename">BLUE-ELEPHANTS</h2>
+                        <span class="ex">
+                            기획:100%<br>
+                            디자인100%<br>
+                            코딩:100%</span>
+                        <div class="btnbox">
+                            <a href="https://github.com/cosmo3o/Blue_Elephants.git" target="_blank"
+                                rel="noopener,noreferrer">
+                                <div class="siteBtn"><span>SOURCE</span></div>
+                            </a>
+                            <a href="https://cosmo3o.github.io/Blue_Elephants/" target="_blank"
+                                rel="noopener,noreferrer">
+                                <div class="siteBtn"><span>SITE VIEW</span></div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="siteicon" src="./images/noone_icon.png" alt="siteicon">
+                        <h2 class="sitename">NOWON-SCIENCE</h2>
+                        <span class="ex">기획:100%<br>디자인:100%<br>틀 활용:100%</span>
+                        <div class="btnbox">
+                            <a href="https://blog.naver.com/camo302" target="_blank" rel="noopener,noreferrer">
+                                <div class="siteBtn"><span>SITE VIEW</span></div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="siteicon" src="./images/megabox-icon.png" alt="siteicon">
+                        <h2 class="sitename">MEGA-BOX</h2>
+                        <span class="ex">기획:0%<br>디자인:50%<br>코딩:100%</span>
+                        <div class="btnbox">
+                            <a href="https://github.com/cosmo3o/midnight_bubble" target="_blank"
+                                rel="noopener,noreferrer">
+                                <div class="siteBtn"><span>SOURCE</span></div>
+                            </a>
+                            <a href="https://cosmo3o.github.io/midnight_bubble/" target="_blank"
+                                rel="noopener,noreferrer">
+                                <div class="siteBtn"><span>SITE VIEW</span></div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="siteicon" src="./images/goodz_icon.png" alt="siteicon">
+                        <h2 class="sitename">GOODZ</h2>
+                        <span class="ex">
+                            기획:100%<br>디자인:100%<br>코딩:100%
+                        </span>
+                        <div class="btnbox">
+                            <a href="#none">
+                                <div class="siteBtn"><span>준비중..</span></div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="study-content">
+                <div class="done">
+                    <img src="./images/close.png" alt="close">
+                </div>
+                <ul>
+                    <li>
+                        <a href="https://howl1503003.tistory.com/category/HTML" target="_blank"
+                            rel="noopener,noreferrer">
+                            <h2 class="studyname">01. HTML</h2>
+                            <span class="ex">:HTML은 마크업의 언어로<br> 웹페이지를 표현하는 언어입니다.</span>
+                            <div class="studyBtn"><span>VIEW MORE</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://howl1503003.tistory.com/category/CSS" target="_blank"
+                            rel="noopener,noreferrer">
+                            <h2 class="studyname">02. CSS</h2>
+                            <span class="ex">:CSS는 규칙 기반 언어로 웹 페이지<br> 스타일 그룹을 지정하는 규칙을 정의합니다.</span>
+                            <div class="studyBtn"><span>VIEW MORE</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://howl1503003.tistory.com/category/jQuery" target="_blank"
+                            rel="noopener,noreferrer">
+                            <h2 class="studyname">03. Jquery</h2>
+                            <span class="ex">:Jquery는 JS언어를 간편하게 사용할 수 있도록 <br>단순화시킨 오픈 소스 기반의 JS라이브러리입니다.</span>
+                            <div class="studyBtn"><span>VIEW MORE</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://howl1503003.tistory.com/category/Javascript" target="_blank"
+                            rel="noopener,noreferrer">
+                            <h2 class="studyname">04. JavaScript</h2>
+                            <span class="ex">:JavaScript는 객체(object) 기반의 스크립트 언어입니다.<br>
+                                웹의 동작을 구현할 수 있습니다.</span>
+                            <div class="studyBtn"><span>VIEW MORE</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://howl1503003.tistory.com/category/React" target="_blank"
+                            rel="noopener,noreferrer">
+                            <h2 class="studyname">05. React</h2>
+                            <span class="ex">:React란 페이스북에서 제공해주는 '컴포넌트'기반의<br> 프론트엔드 라이브러리입니다.</span>
+                            <div class="studyBtn"><span>VIEW MORE</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://howl1503003.tistory.com/category/ETC" target="_blank"
+                            rel="noopener,noreferrer">
+                            <h2 class="studyname">ETC</h2>
+                            <span class="ex">MySQL, VUE..</span>
+                            <div class="studyBtn"><span>VIEW MORE</span></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="section02-stuff">
+                <p class="game-text">코딩을 잘하진 못하지만
+                    ~<br>공략을 찾아
+                    해내는 것을 즐깁니다. 게임처럼!</p>
+                <div>
+                    <div class="stand2">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <img src="./images/stand-long.png" alt="stand">
+                    </div>
+                    <div class="sofa">
+                        <img src="./images/sofa.png" alt="sofa">
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card card-one">
+                    <div class="content">
+                        <h2 class="title">
+                            Web-Site</h2>
+                        <div class="card-cont-in">
+                            <div class="star">
+                            </div>
+                        </div>
+                        <p class="tag">
+                            #html #javascript #css #jquery #Web-Site</p>
+                        <button class="click-btn">Click view</button>
+                    </div>
+                </div>
+                <div class="card card-two">
+                    <div class="content">
+                        <h2 class="title">Study</h2>
+                        <div class="card-cont-in">
+                            <div class="coin">
+                            </div>
+                        </div>
+                        <p class="tag">
+                            #html #javascript #css #jquery</p>
+                        <button class="click-btn">Click view</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section03 horizontal-section">
+            <div class="section03-stuff">
+                <div class="chicken">
+                    <a href="https://cosmo3o.github.io/woo_dain__p__design/" target="_blank" rel="noopener,noreferrer">
+                        <img class="chickenimg click-btn" src="./images/chicken.gif" alt="chicken">
+                    </a>
+                </div>
+                <div class="kitchen-table">
+                    <p class="design-text">
+                        <span>Design</span><br>
+                        맛있어 보이는 음식처럼<br>
+                        자연스럽게 눈길이 가고 생각나는 >
+                    </p>
+                    <img src="./images/kitchen-table.png" alt="kitchen-table">
+                </div>
+            </div>
+        </section>
+        <section class="section04 horizontal-section">
+            <div class="flipbox">
+                <div class="flip">
+                    <div class="front" style="background-image: url(images/g_1.png)">
+                        <h1 class="text-shadow">히스토리</h1>
+                    </div>
+                    <div class="back f1">
+                        <p>부산조형예술고등학교<br><span class="sm">공예학과 졸업</span><br><br>
+                            국립 창원대학교<br><span class="sm">미술학과 졸업</span><br><br>
+                            양정인력센터<br><span class="sm">웹디자인/퍼블리싱수업 이수</span><br><br>
+                            웹디자인 기능사<br><span class="sm">자격증 취득 21.07</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="flip">
+                    <div class="front" style="background-image: url(images/my2.png)">
+                    </div>
+                    <div class="back f2">
+                        <p>
+                            가능성은 찾아다니는 것<br><span class="b-sp">추진력 있는 긍정맨</span><br><br>
+                            학창시절부터 이어져온<br>
+                            개근과 <span class="b-sp">근면성실</span><br><br>
+                            성실함에 더하면<br> 제일 무서운 <span class="b-sp">꾸준하려는 노력!</span><br><br>
+                            <span class="b-sp">새로운 일들에 열린 문!</span><br>
+                            활발의 아이콘 ENFP-T!<br><br>
+                        </p>
+                    </div>
+                </div>
+                <div class="flip">
+                    <div class="front" style="background: url(images/my3.png);"">
+                    </div>
+                    <div class=" back f3">
+                        <p>
+                            맛있는 음식을 먹고나면<br>
+                            기분이 좋은 것처럼<br>
+                            늘 마무리가 중요하고<br><br>
+                            제 삶의 마무리를 위해서는<br>
+                            계속 배워야한다고 생각했습니다.
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <div class="flip">
+                    <div class="front" style="background-image: url(images/my4.png)">
+                        <h1 class="text-shadow">좋아하는 것</hi>
+                    </div>
+                    <div class="back f4">
+                        <p>
+                            화려한 외투<br><br>
+                            우리집 똥고양이<br><br>
+                            맛있는 것!최근 살찜<br><br>
+                            운동! 최근 헬스에 빠짐<br><br>
+                            그림! 최근 도트찍기에 빠짐<br><br>
+                            영화관람!/리뷰쓰기/독서<br><br>
+                        </p>
+                    </div>
+                </div>
+                <div class="flip">
+                    <div class="front" style="background-image: url(images/my5.png)">
+                    </div>
+                    <div class="back f5">
+                        <p>
+                            <span class="r-sp">말보다 행동이 앞서는 편입니다</span><br>
+                            그덕에<br>
+                            <span class="b-sp">뭐든 시도를 많이 합니다</span><br><br>
+
+                            <span class="r-sp">새로운 것을 너무 좋아합니다</span> 것은<br>
+                            코딩과 디자인은 1년만 지나도<br>
+                            또 새로운 게 잔뜩 나오기 때문에<br>
+                            <span class="b-sp">이젠 장점이 될 수 있습니다.</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="flip">
+                    <div class="front" style="background-image: url(images/study2.png)">
+                        <h1 class="text-shadow">목표와 현재</hi>
+                    </div>
+                    <!-- 공부 자바스크립트 타임스크립트 부트스트랩 리액트 -->
+                    <div class="back f6">
+                        <h3>목표</h3>
+                        <p>
+                            디자인할 때<br>
+                            선택과 소통과 폭이 큰 사람<br><br>
+                        </p>
+                        <h3>현재</h3>
+                        JavaScript<br>
+                        TimeScript<br>
+                        React<br>
+                        vue<br>
+                        <span style="font-size: 1rem;">공부중</span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="s4night">
+            </div>
+            <div class="section04-stuff">
+                <div class="bed">
+                    <p class="tmi">
+                        My Information</p>
+                    <div class="gangnaeng">
+                        <img src="./images/gangnaeng.gif" alt="cat">
+                    </div>
+                    <img src="./images/bed.png" alt="bed">
+                </div>
+            </div>
+        </section>
+        <section class="section05 horizontal-section">
+            <div class="quick-text">
+                <p>
+                    놓친게 있다면<br>빠른메뉴를 이용해보세요
+                    <img class="pointimg" src="./images/Asset-4.png" alt="">
+                </p>
+            </div>
+            <div class="thankyou">
+                <p>봐주셔서 감사합니다!<br>
+                    오늘 하루도 좋은 느낌 가득하길 빌어요.
+                </p>
+            </div>
+        </section>
+    </div>
+    <!-- vertical/ last-container -->
+    <div class="last-container">
+        <section class="footer" id="contact">
+            <div class="footer-tit">
+                <h2>SEND A MESSAGE</h2>
+            </div>
+            <div class="postbox">
+                <form method="POST" action="https://formspree.io/rudfla03@naver.com">
+                    <input type="text" name="name" class="name" placeholder="Your Name">
+                    <input type="email" class="email" name="email" placeholder="Your Email">
+                    <textarea name="message" placeholder="Message"></textarea>
+                    <button type="submit" class="submit">SEND</button>
+                </form>
+            </div>
+            <div class="cats">
+                <div>
+                    <img src="./images/gangnaeng_last.gif" alt="cat">
+                </div>
+                <div>
+                    <img src="./images/bowl.png" alt="bowl">
+                </div>
+                <div>
+                    <img src="./images/boss_last.gif" alt="cat">
+                </div>
+            </div>
+            <p>E-mail: howl1503@gmail.com<br>
+                Copyright 2021. WOO-DAIN. All right Reserved.</p>
+        </section>
+    </div>
+    <!-- ====pop>main1 - 2======= -->
+    <div class="overlay-black"></div>
+    <div class="message-pop">
+        <img class="back" onclick="backBtn()" src="./images/back.png" alt="">
+        <h2>guest</h2>
+        <div class="message-pop-chat">
+            <div class="y1">
+                <p><img src="./images/m_1.png" alt="img"><br>
+                    방 한번 볼 수 있을까요.<br>
+                    <span>오전08:--</span>
+                </p>
+            </div>
+            <div class="mytalk my1">
+                <p>물론이죠!<br>
+                    <span>오전08:--</span>
+                </p>
+            </div><br>
+            <div class="mytalk my2">
+                <p>아직 수정중이여서 모바일화면에서<br>
+                    제대로 구현되지 않을수 있어요!<br>
+                    크롬/PC사용을 권장 드려요.
+                    <span>오전08:--</span>
+                </p>
+            </div><br>
+            <div class="mytalk my3">
+                <p>옆엔 제 룸메이트인데 스크롤하시는 동안<br> 따라다닐꺼예요 만져주는걸 좋아한답니다(?)
+                    <span>오전08:--</span>
+                </p>
+            </div>
+        </div>
+        <div class="message-pop-bottom">
+            <img class="plus" src="./images/plus.png" alt="plusimg">
+            <div class="chat-bar">
+                <p class="tagin-off">편하게 이것저것 클릭해보세요</p>
+                <p class="tagin">#만나서 반가워요#신입#긍정적인</p>
+                <img class="heart" src="./images/heart.png" alt="smileheart-img">
+                <div>
+                    <img class="smile" onclick="smileBtn()" src="./images/smile.png" alt="smile-img">
+                </div>
+                <div>
+                    <img class="tag" onclick="tagBtn()" src="./images/tag.png" alt="tag">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gallery-pop">
+        <img class="back1" onclick="backBtn()" src="./images/back.png" alt="backimg">
+        <div class="gallery-tit">
+            <h2>About me</h2>
+            <ul class="tit">
+                <li class="active gbar1"><a href=".gallery1" class="titbtn">나의 소개</a><span class="active"></span>
+                </li>
+                <li class="gbar2"><a href=".gallery2" class="titbtn">지원동기</a><span></span></li>
+                <li class="gbar3"><a href=".gallery3" class="titbtn">책임감원천</a><span></span></li>
+            </ul>
+            <div class="gray-bar">
+                <span class="gbar1" style="opacity: 1;"></span>
+                <span class="gbar2"></span>
+                <span class="gbar3"></span>
+            </div>
+            <!-- =========== -->
+            <div class="gallery-tab">
+                <div class="gallery1 gtab" style="display: block;">
+                    <div class="g-top">
+                        <div class="myself-box">
+                            <p>신입웹퍼블리셔 웹디자이너<br>
+                                "우다인"입니다.<br>
+                                더 먹기 편하고 보기 좋게<br>
+                                고심했던 음식 한 그릇처럼 <br>
+                                생각하며 준비했습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="g-bottom">
+                        <ul>
+                            <li><img src="./images/g1_1.png" alt="images"></li>
+                            <li><img src="./images/g1_2.png" alt="images"></li>
+                            <li><img src="./images/g1_3.gif" alt="images"></li>
+                            <li><img src="./images/g1_4.png" alt="images"></li>
+                            <li><img src="./images/g1_6.png" alt="images"></li>
+                            <li><img src="./images/g1_5.png" alt="images"></li>
+                        </ul>
+                        <p style="font-size: 1.2rem;">지난날</p>
+                    </div>
+                </div>
+                <div class="gallery2 gtab">
+                    <div class="g-top2">
+                        <p>
+                            이 관심이 어떻게 자라게 되었는지에 대하여<br>
+                            <span class="keyword">▼ 아래의 키워드들을 호버해주세요</span>
+                        </p>
+                    </div>
+                    <div class="g-bottom2">
+                        <ul>
+                            <li class="square">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <div>
+                                    <p class="p1 p-f">계기</p>
+                                    <p class="p2 p-b">코로나라는<br>위기를<br> 이직 기회로 삼음</p>
+                                </div>
+                            </li>
+                            <li class="square">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <div>
+                                    <p class="p3 p-f">관심 동기</p>
+                                    <p class="p4 p-b">어느 곳에서나<br>'영향력을<br>다루는 힘'</p>
+                                </div>
+                            </li>
+                            <li class="square">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <div>
+                                    <p class="p5 p-f">빠져든점</p>
+                                    <p class="p6 p-b">목적에 방향과<br>이미지를 부여하는 점</p>
+                                </div>
+                            </li>
+                            <li class="square">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <div>
+                                    <p class="p7 p-f">잘맞는점</p>
+                                    <p class="p8 p-b">도전정신!<br>아이디어!<br>실천력!</p>
+                                </div>
+                            </li>
+                            <li class="square">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <div>
+                                    <p class="p9 p-f">희망사항</p>
+                                    <p class="p10 p-b">협업하고 경험하며, 배우고 성장하고 싶습니다</p>
+                                </div>
+                            </li>
+                            <li class="square">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <div>
+                                    <p class="p11 p-f">희망목표</p>
+                                    <p class="p12 p-b">코딩과 디자인 소통이 편하고 빠른 사람</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gallery3 gtab">
+                    <div class="g-top">
+                        <img src="./images/g3_main.gif" alt="photo">
+                    </div>
+                    <p class="cat-text1">책임감과 부지런함을 키워준 녀석들</p>
+                    <div class="g-bottom">
+                        <ul>
+                            <li><a href="#none"><img src="./images/g3_2.png" alt="cat"></a></li>
+                            <li><a href="#none"><img src="./images/g3_3.png" alt="cat"></a></li>
+                            <li><a href="#none"><img src="./images/g3_4.png" alt="cat"></a></li>
+                            <li>
+                                <div>
+                                    <img src="./images/gangnaeng.gif" alt="#">
+                                </div>
+                                <div>
+                                    <img class="boss-gtalk" src="./images/boss_g_talk.gif" alt="#">
+                                    <div class="bowl"></div>
+                                </div>
+                                <div>
+                                    <img src="./images/boss_Intro.gif" alt="cat">
+                                </div>
+                            </li>
+                        </ul>
+                        <p class="cat-text2">강냉이와 보스</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script/jquery-3.1.1.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="script/ScrollTrigger 3.7.1.js"></script>
+    <script src="script/custom.js"></script>
+    <script>
+        $(window).load, $(document).ready(function () {
+
+            if ($('#main-container .main1 .sns1 .message').addClass('message-top')) {
+                setTimeout(function () {
+                    $('#main-container .main1 .sns1 .message').addClass(
+                        'message-on');
+                    $('#main-container .main1 .sns1 .message-under').css({
+                        'opacity': '1'
+                    });
+                    $('#main-container .main1 .sns1 .message-under').addClass(
+                        'message-under-on');
+                }, 1000);
+            }
+            $(window).scroll(function () {
+                var location = $(window).scrollTop().toFixed(0);
+                // let SECTION = $('section');
+                // console.log($(window).scrollTop());
+                //main
+                $('.window-Scroll').text(location);
+                if (($(window).scrollTop() <= 900) || ($(window).scrollTop() >= 1500)) {
+                    $('#main-container .main2 .sns2 .gallery').addClass('gallery-move');
+                    $('#main-container .main2 .sns2 .gallery-under').addClass(
+                        'gallery-under-move');
+                } else {
+                    $('#main-container .main2 .sns2 .gallery').removeClass('gallery-move');
+                    $('#main-container .main2 .sns2 .gallery-under').removeClass(
+                        'gallery-under-move');
+                }
+
+                if (($(window).scrollTop() >= 900) || ($(window).scrollTop() <= 1500)) {
+                    setTimeout(function () {
+                        $('#main-container .main2 .sns2 .gallery').removeClass(
+                            'gallery-move');
+                        $('#main-container .main2 .sns2 .gallery-under').removeClass(
+                            'gallery-under-move');
+                        $('#main-container .main2 .sns2 .gallery').addClass(
+                            'gallery-on');
+                        $('#main-container .main2 .sns2 .gallery-under').addClass(
+                            'gallery-under-on');
+                    }, 1000);
+                } else {
+                    $('#main-container .main2 .sns2 .gallery').removeClass('gallery-move');
+                    $('#main-container .main2 .sns2 .gallery-under').removeClass(
+                        'gallery-under-move');
+                }
+                if (($(window).scrollTop() >= 1200)) {
+                    $('#main-container .icon-nav').css({
+                        'opacity': '0'
+                    });
+                }
+                if (($(window).scrollTop() <= 1200)) {
+                    $('#main-container .icon-nav').css({
+                        'opacity': '1'
+                    });
+
+                }
+                if (($(window).scrollTop() <= 5800) || ($(window).scrollTop() >= 8000)) {
+                    $('.section03 .section03-stuff .chicken').addClass('chicken-move');
+                } else {
+                    $('.section03 .section03-stuff .chicken').removeClass('chicken-move');
+                }
+                if (($(window).scrollTop() <= 11400)) {
+                    $('.boss').css({
+                        'z-index': '99998',
+                        'transition': '0.2s'
+                    });
+                }
+                if (($(window).scrollTop() > 11400)) {
+                    $('.boss').css({
+                        'z-index': '-1',
+                        'transition': '0s'
+                    });
+                }
+            });
+        });
+        // ==================================================
+        let lastScrollTop = 0;
+        $(window).scroll(function () {
+            let scrollTop = $(window).scrollTop();
+            if (scrollTop < lastScrollTop) {
+                $(".boss").css({
+                    'background': 'no-repeat url(../images/boss_default.gif)'
+                });
+            } else {
+                $(".boss").css({
+                    'background': 'no-repeat url(../images/boss_default_scroll_on.gif)'
+                });
+            }
+            lastScrollTop = scrollTop;
+        });
+        // =========================
+    </script>
+</body>
+
+</html>
