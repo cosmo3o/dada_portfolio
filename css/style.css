@@ -187,11 +187,11 @@ body.active {
     transition: 1.3s;
 }
 
-/* boss */
+/* 
+*/
 .boss {
     opacity: 0;
     background: no-repeat url(../images/boss_default_scroll_on.gif);
-    background-size: contain;
     position: fixed;
     bottom: 20px;
     left:20vw;
