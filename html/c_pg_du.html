@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../avicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link type="text/css" rel="stylesheet" href="../css/reset.css">
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+    <link type="text/css" rel="stylesheet" href="../css/ui.css">
+    <title>CANDA</title>
+</head>
+
+<body>
+    <aside class="top_btn">
+        <a href="#"></a>
+    </aside>
+    <aside class="back-btn" onclick="back()">
+        <a href="#"></a>
+    </aside>
+    <div class="wrap">
+        <section class="contsec00">
+            <div class="sec00-title">
+                <div class="icon">
+                    <a href="https://cosmo3o.github.io/duolac/" target="_blank">
+                        <img src="../images/duolac-icon.png" alt="듀오락 로고">
+                        <h3>DUOLAC</h3>
+                        <div class="view">
+                            <span></span>
+                            사이트이동
+                        </div>
+                    </a>
+                </div>
+                <ul>
+                    <li>기획 100%</li>
+                    <li>디자인 100%</li>
+                    <li>코딩 100%</li>
+                    <li>반응형 X</li>
+                </ul>
+                <div class="ps">
+                    본사이트는 슬라이드, 탭 메뉴 기능이 있으며,<br>
+                    HTML, CSS, jquery를 이용하여 작업하였습니다.<br>
+                    로고와 배너 이미지, 사진을 직접 편집 제작하였습니다.
+                </div>
+                <div class="color-set">
+                    <ul class="color">
+                        <li style="background: #2b222c;"></li>
+                        <li style="background: #cbb7d9;"></li>
+                        <li style="background: #fff;"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-cont">
+                <div class="logo-img">
+                    <img src="../images/duolac-LOGO.png" alt="듀오락 로고">
+                </div>
+                <div class="site-img">
+                    <img src="../images/DU_design_.png" alt="듀오락 홈페이지 이미지">
+                </div>
+             
+            </div>
+        </section>
+    </div>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script>
+        //고정메뉴바
+        $('#fixmenu-toggle').click(function () {
+            $(this).toggleClass("active");
+            $('#fixmenu-overlay').toggleClass("show");
+        });
+        var all = $(".overlay-menu li a")
+        var overlay = $(".fixmenu-overlay")
+
+        all.click(function () {
+            $(overlay).removeClass("show");
+            $('#fixmenu-toggle').removeClass("active");
+        });
+
+        all.mouseover(function () {
+            $(this).css("color", "rgb(200, 219, 230)")
+            $(overlay).addClass("white");
+
+        });
+        all.mouseout(function () {
+            $(this).css("color", "#fff")
+            $(overlay).removeClass("white");
+        });
+
+        function back() {
+            // history.go(-1); 
+            // history.back();
+            location.href = "../html/work.html#work";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../avicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link type="text/css" rel="stylesheet" href="../css/reset.css">
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+    <link type="text/css" rel="stylesheet" href="../css/ui.css">
+    <title>CANDA</title>
+</head>
+
+<body>
+    <header>
+        <nav class="header-nav">
+            <div>
+                <a href="../index.html#about">ABOUT</a>
+            </div>
+            <div>
+                <a href="../html/work.html">WORK</a>
+            </div>
+            <div>
+                <a href="../html/contact.html">CONTACT</a>
+            </div>
+        </nav>
+        <div class="logo-box">
+        </div>
+        <div class="social">
+            <ul>
+                <li>
+                    <a href="#none">BLOG</a>
+                </li>
+                <li>
+                    <a href="../index.html">HOME</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- 고정메뉴바 -->
+    <div class="fixmenu-button" id="fixmenu-toggle">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+    </div>
+    <div class="fixmenu-overlay" id="fixmenu-overlay">
+        <nav class="overlay-menu">
+            <ul>
+                <li><a href="../index.html#home">HOME</a></li>
+                <li><a href="../index.html#about">ABOUT</a></li>
+                <li><a href="../html/work.html#work">WORK</a></li>
+                <li><a href="../html/contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="wrap">
+        <section class="sec04">
+            <div class="sec04-tit">
+                <h2>SEND A MESSAGE</h2>
+            </div>
+            <div class="postbox">
+                <form method="POST" action="https://formspree.io/rudfla03@naver.com">
+                    <input type="text" name="name" class="name" placeholder="Your Name">
+                    <input type="email" class="email" name="email" placeholder="Your Email">
+                    <textarea name="message" placeholder="Message"></textarea>
+                    <button type="submit" class="submit">SEND</button>
+                </form>
+            </div>
+            <div class="cats00">
+                <div>
+                    <img src="../images/gangnaeng_last.gif" alt="cat">
+                </div>
+                <div>
+                    <img src="../images/bowl.png" alt="bowl">
+                </div>
+                <div>
+                    <img src="../images/boss_last.gif" alt="cat">
+                </div>
+            </div>
+            <p>E-mail: howl1503@gmail.com<br>
+                Copyright 2021. WOO-DAIN. All right Reserved.</p>
+        </section>
+    </div>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script>
+        //고정메뉴바
+        $('#fixmenu-toggle').click(function () {
+            $(this).toggleClass("active");
+            $('#fixmenu-overlay').toggleClass("show");
+        });
+        var all = $(".overlay-menu li a")
+        var overlay = $(".fixmenu-overlay")
+
+        all.click(function () {
+            $(overlay).removeClass("show");
+            $('#fixmenu-toggle').removeClass("active");
+        });
+
+        all.mouseover(function () {
+            $(this).css("color", "rgb(200, 219, 230)")
+            $(overlay).addClass("white");
+
+        });
+        all.mouseout(function () {
+            $(this).css("color", "#fff")
+            $(overlay).removeClass("white");
+        });
+    </script>
+</body>
+
+</html>
